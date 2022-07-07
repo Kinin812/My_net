@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Об авторе проекта{% endblock %}
+{% block content %}
+<div class="container py-5">
+	<table width:100%">
+		<tbody>
+			<tr align="center">
+				<td colspan="2">
+				<h1>Привет, я автор этого шедевра</h1>
+				</td>
+			</tr>
+			<tr>
+				<td align="center" width=60%>Тут я размещу информацию о себе используя свои умения верстать. Пока будем считать, что это начало моих подвигов в веб-дизайне. Бутстреп буду изучать в перспективе, - пока как-то не до него. Умею только рисовать таблички, строки, столбцы. Знаю основные теги. )))</td>
+				<td width="40%"><img alt="My face" src="{% static "img/my_fon.png" type="image" %}" style="float:right; width:500px" /></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+{% endblock %}

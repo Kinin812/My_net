@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block title %}{{ title }}{% endblock %}
+{% block header %}{{ title }}{% endblock %}
+{% block content %}
+{% load user_filters%}
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8 p-5">
+        <div class="card">
+          <div class="card-header">
+            {{ title }}
+          </div>
+          <div class="card-body">
+            {% for error in form.errors %}
+              <div class="alert alert-danger" role="alert">
+                {{ error }}
+              </div>
+            {% endfor %}
+            <form method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+              <div class="form-group row my-3 p-3">
+                <label for="id_text">
+                  Текст записи
+                  <span class="required text-danger" >*</span>
+                </label>
+                  {{ form.text|safe }}
+                <small id="id_text-help" class="form-text text-muted">
+                  Поле для ввода текста записи
+                </small>
+              </div>
+              <div class="form-group row my-3 p-3">
+                <label for="id_group">
+                  Группа
+                </label>
+                  {{ form.group|safe }}
+                <small id="id_group-help" class="form-text text-muted">
+                  Группа, к которой будет относиться запись
+                </small>
+              </div>
+              <div class="form-group row my-3 p-3">
+                <label for="id_image">
+                  Картинка
+                </label>
+                  {{ form.image|safe }}
+                <small id="id_image-help" class="form-text text-muted">
+                  Загружаемая картинка
+                </small>
+              </div>
+              <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary">
+                  {{ btn_text }}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+
