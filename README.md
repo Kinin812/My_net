@@ -44,6 +44,8 @@ python manage.py migrate
 python manage.py runserver
 ```
 
+* Запущенный проект доступен по адресу: [http://localhost:8000](http://localhost:8000)
+
 <div id="header" align="center">
   <img src="https://media.giphy.com/media/FdHzfvQyyIzBaXi7lM/giphy.gif" width="200" align="left"/>
 </div>
