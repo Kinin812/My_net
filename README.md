@@ -13,7 +13,7 @@
 
 * Склонировать репозиторий на локальную машину:
 ```bash
-git clone https://github.com/Kinin812/Yatube_final.git
+git clone https://github.com/Kinin812/Yatube.git
 ```
 
 * Cоздать и активировать виртуальное окружение:
