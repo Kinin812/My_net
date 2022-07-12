@@ -1,4 +1,4 @@
-# Yatube_final
+# Yatube
 
 ## Стек технологий
 
