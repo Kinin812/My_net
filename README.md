@@ -14,7 +14,7 @@
 * Склонировать репозиторий на локальную машину:
 ```bash
 git clone https://github.com/Kinin812/Yatube_final.git
-cd foodgram-project-react
+cd yatube
 ```
 
 * Cоздать и активировать виртуальное окружение:
@@ -30,7 +30,7 @@ source env/bin/activate
 * Перейти в директирию и установить зависимости из файла requirements.txt:
 
 ```bash
-cd backend/
+cd yatube/
 pip install -r requirements.txt
 ```
 
@@ -44,7 +44,6 @@ python manage.py migrate
 ```bash
 python manage.py runserver
 ```
-
 
 <div id="header" align="center">
   <img src="https://media.giphy.com/media/FdHzfvQyyIzBaXi7lM/giphy.gif" width="200" align="left"/>
