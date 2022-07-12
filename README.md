@@ -13,7 +13,7 @@
 
 * Склонировать репозиторий на локальную машину:
 ```bash
-git clone https://github.com/skarabey147/foodgram-project-react.git
+git clone https://github.com/Kinin812/Yatube_final.git
 cd foodgram-project-react
 ```
 
