@@ -14,7 +14,6 @@
 * Склонировать репозиторий на локальную машину:
 ```bash
 git clone https://github.com/Kinin812/Yatube_final.git
-cd yatube
 ```
 
 * Cоздать и активировать виртуальное окружение:
