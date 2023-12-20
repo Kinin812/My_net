@@ -6,9 +6,9 @@ SECRET_KEY = 'm2tpju07*u+mn(6*1f7x8hg)87ow1)dptt1^8ubot-sy7zk-i('
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'testserver']
+ALLOWED_HOSTS = []
 
-INTERNAL_IPS = ['127.0.0.1', 'localhost', 'testserver']
+# INTERNAL_IPS = ['127.0.0.1', 'localhost', 'testserver']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -96,12 +96,12 @@ STATIC_URL = '/static/'
 
 LOGIN_URL = 'users:login'
 LOGIN_REDIRECT_URL = 'posts:index'
-# LOGOUT_REDIRECT_URL = 'posts:index'
+LOGOUT_REDIRECT_URL = 'posts:index'
 
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_emails')
 
-POSTS_PER_PAGE = 10
+POSTS_PER_PAGE = 2
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

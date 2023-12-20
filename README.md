@@ -2,7 +2,7 @@
   <img src="https://media.giphy.com/media/FdHzfvQyyIzBaXi7lM/giphy.gif" width="100" align="left"/>
 </div>
 
-# Yatube 
+# My_net 
 
 ---
 

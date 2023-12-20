@@ -1,12 +1,17 @@
-from django.conf import settings
-from django.http import HttpResponseRedirect
-from django.utils import timezone
-from django.core.paginator import Paginator
-from django.shortcuts import render, get_object_or_404, redirect
-from django.contrib.auth.decorators import login_required
+from urllib import request
 
-from .models import Post, Group, Comment, Follow, User
+from django.conf import settings
+from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator
+from django.http import HttpResponseRedirect
+from django.shortcuts import render, get_object_or_404, redirect
+from django.urls import reverse_lazy
+from django.utils import timezone
+from django.views.generic.edit import CreateView
+
 from .forms import PostForm, CommentForm
+from .mixins import AuthenticatedMixin
+from .models import Post, Group, Comment, Follow, User
 
 
 def paginator_for_all_funcs(request, post_list):
@@ -85,6 +90,13 @@ def add_comment(request, post_id):
         comment.post = post
         comment.save()
     return redirect('posts:post_detail', post_id=post_id)
+
+
+# @login_required
+class PostCreate(CreateView, AuthenticatedMixin):
+    form_class = PostForm
+    template_name = 'posts/create_post.html'
+    success_url = reverse_lazy('index')
 
 
 @login_required
