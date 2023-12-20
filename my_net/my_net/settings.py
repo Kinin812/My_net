@@ -36,7 +36,7 @@ MIDDLEWARE = [
 #    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
-ROOT_URLCONF = 'yatube.urls'
+ROOT_URLCONF = 'my_net.urls'
 
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 TEMPLATES = [
@@ -56,7 +56,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'yatube.wsgi.application'
+WSGI_APPLICATION = 'my_net.wsgi.application'
 
 DATABASES = {
     'default': {

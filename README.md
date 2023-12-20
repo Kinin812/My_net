@@ -35,7 +35,7 @@ source env/bin/activate
 * Перейти в директирию и установить зависимости из файла requirements.txt:
 
 ```bash
-cd yatube/
+cd my_net/
 pip install -r requirements.txt
 ```
 
